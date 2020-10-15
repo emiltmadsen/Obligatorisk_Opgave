@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-
 <head th:replace="fragments/head"></head>
-
 <body>
 
 <nav th:replace="fragments/navbar"></nav>
+
+<div>
+    <h4> Current Projects </h4>
+    <table>
+        <thead>
+        <tr>
+            <th> Project Name </th>
+            <th> Project Stage </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="aProject : ${projectsList}">
+            <td th:text="${aProject.name}"></td>
+            <td th:text="${aProject.stage}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <h4> Current Employees </h4>
+    <table>
+        <thead>
+        <tr>
+            <th> First name </th>
+            <th> Last name </th>
+            <th> Email Address </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="anEmployee : ${employeesList}">
+            <td th:text="${anEmployee.firstName}" ></td>
+            <td th:text="${anEmployee.lastName}" ></td>
+            <td th:text="${anEmployee.email}" ></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>
