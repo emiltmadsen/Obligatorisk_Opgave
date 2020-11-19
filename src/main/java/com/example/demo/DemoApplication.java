@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication {
 
+    // Jenkins test
+
     @Autowired
     EmployeeRepository empRepo;
 
